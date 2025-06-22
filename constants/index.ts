@@ -1,3 +1,4 @@
-import Constant from 'expo-constants';
-export const CLOUDINARY_CLOUD_NAME = Constant.expoConfig?.extra?.CLOUDINARY_CLOUD_NAME;
-export const CLOUDINARY_UPLOAD_PRESET = Constant.expoConfig?.extra?.CLOUDINARY_UPLOAD_PRESET;
+// @ts-nocheck
+import { EXPO_CLOUDINARY_CLOUD_NAME, EXPO_CLOUDINARY_UPLOAD_PRESET } from "@env";
+export const CLOUDINARY_CLOUD_NAME = EXPO_CLOUDINARY_CLOUD_NAME;
+export const CLOUDINARY_UPLOAD_PRESET = EXPO_CLOUDINARY_UPLOAD_PRESET;

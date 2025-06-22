@@ -20,7 +20,7 @@ const settingsModal = () => {
         {/* form */}
          <ScrollView>
           <View style={{ justifyContent:"center", alignItems: "center"}}>
-            <Typo fontWeight={"600"}>Empty page</Typo>
+            <Typo fontWeight={"600"}>Empty</Typo>
           </View>
            
         </ScrollView>

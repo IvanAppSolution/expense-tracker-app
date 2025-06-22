@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   balanceView: {
     height: verticalScale(160),
-    backgroundColor: colors.black,
+    // backgroundColor: colors.black,
     justifyContent: "center",
     alignItems: "center",
   },

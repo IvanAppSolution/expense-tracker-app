@@ -273,7 +273,7 @@ const TransactionModal = () => {
           {transaction.type === "expense" && (
             <View style={styles.inputContainer}>
               <Typo color={colors.neutral200} size={16} fontWeight={"500"}>
-                Expense Cateogry
+                Expense Category
               </Typo>
               <Dropdown
                 style={styles.dropdownContainer}
@@ -314,47 +314,6 @@ const TransactionModal = () => {
               />
             </View>
           )}
-
-          {/* date picker */}
-          <View style={styles.inputContainer}>
-            <Typo color={colors.neutral200} size={16} fontWeight={"500"}>
-              Date
-            </Typo>
-            {!showDatePicker && (
-              <Pressable
-                style={styles.dateInput}
-                onPress={() => setShowDatePicker(true)}
-              >
-                <Typo size={14}>
-                  {(transaction?.date as Date)?.toLocaleDateString()}
-                </Typo>
-              </Pressable>
-            )}
-
-            {showDatePicker && (
-              <View style={Platform.OS === "ios" && styles.iosDatePicker}>
-                <DateTimePicker
-                  themeVariant="dark"
-                  value={transaction.date as Date}
-                  textColor={colors.white}
-                  mode="date"
-                  display={Platform.OS === "ios" ? "spinner" : "default"}
-                  onChange={onDateChange}
-                />
-
-                {Platform.OS === "ios" && (
-                  <TouchableOpacity
-                    style={styles.datePickerButton}
-                    onPress={() => setShowDatePicker(false)}
-                  >
-                    <Typo size={15} fontWeight={"500"}>
-                      OK
-                    </Typo>
-                  </TouchableOpacity>
-                )}
-              </View>
-            )}
-          </View>
 
           {/* amount */}
           <View style={styles.inputContainer}>
@@ -403,10 +362,52 @@ const TransactionModal = () => {
               }
             />
           </View>
+
+          {/* date picker */}
+          <View style={styles.inputContainer}>
+            <Typo color={colors.neutral200} size={16} fontWeight={"500"}>
+              Date
+            </Typo>
+            {!showDatePicker && (
+              <Pressable
+                style={styles.dateInput}
+                onPress={() => setShowDatePicker(true)}
+              >
+                <Typo size={14}>
+                  {(transaction?.date as Date)?.toLocaleDateString()}
+                </Typo>
+              </Pressable>
+            )}
+
+            {showDatePicker && (
+              <View style={Platform.OS === "ios" && styles.iosDatePicker}>
+                <DateTimePicker
+                  themeVariant="dark"
+                  value={transaction.date as Date}
+                  textColor={colors.white}
+                  mode="date"
+                  display={Platform.OS === "ios" ? "spinner" : "default"}
+                  onChange={onDateChange}
+                />
+
+                {Platform.OS === "ios" && (
+                  <TouchableOpacity
+                    style={styles.datePickerButton}
+                    onPress={() => setShowDatePicker(false)}
+                  >
+                    <Typo size={15} fontWeight={"500"}>
+                      OK
+                    </Typo>
+                  </TouchableOpacity>
+                )}
+              </View>
+            )}
+          </View>
+
           <View style={styles.inputContainer}>
             <View style={styles.flexRow}>
               <Typo color={colors.neutral200} size={16}>
-                Receipt
+                Image / Receipt
               </Typo>
               <Typo color={colors.neutral500} size={14}>
                 (optional)

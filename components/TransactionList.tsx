@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     marginBottom: spacingY._12,
 
     // list with background
-    backgroundColor: colors.neutral800,
+    backgroundColor: "rgba(38, 38, 38, 0.6)",
     padding: spacingY._10,
     paddingHorizontal: spacingY._10,
     borderRadius: radius._17,

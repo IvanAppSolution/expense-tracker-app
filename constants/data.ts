@@ -7,13 +7,13 @@ export const expenseCategories: ExpenseCategoriesType = {
     label: "Food",
     value: "food",
     icon: Icons.BowlFood,
-    bgColor: "#4B5563", // Deep Teal Green
+    bgColor: "#4c7d53",
   },
   groceries: {
     label: "Groceries",
     value: "groceries",
     icon: Icons.ShoppingCart,
-    bgColor: "#4B5563", // Deep Teal Green
+    bgColor: "#91ba77",
   },
   rent: {
     label: "Rent",
@@ -55,7 +55,7 @@ export const expenseCategories: ExpenseCategoriesType = {
     label: "Insurance",
     value: "insurance",
     icon: Icons.ShieldCheck,
-    bgColor: "#404040", // Dark Gray
+    bgColor: "#d463a1",
   },
   savings: {
     label: "Savings",
@@ -67,7 +67,7 @@ export const expenseCategories: ExpenseCategoriesType = {
     label: "Clothing",
     value: "clothing",
     icon: Icons.TShirt,
-    bgColor: "#7c3aed", // Dark Indigo
+    bgColor: "#4075c9", // Dark Indigo
   },
   personal: {
     label: "Personal",
